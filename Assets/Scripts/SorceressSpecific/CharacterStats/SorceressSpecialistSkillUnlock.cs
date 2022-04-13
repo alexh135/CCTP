@@ -6,29 +6,29 @@ public class SorceressSpecialistSkillUnlock : MonoBehaviour
 {
     public SkillPointHandler pointHandler;
 
-    public bool BargeUnlocked;
+    public bool healthSplashPotUnlocked;
     public bool SpeedUnlocked;
     public bool DamageUnlocked;
     public bool jumpUnlocked;
-    public bool glitchUnlocked;
-    public bool timeUnlocked;
+    public bool fireBallUnlocked;
+    public bool levitateUnlcoked;
 
     public void Start()
     {
-        BargeUnlocked = false;
+        healthSplashPotUnlocked = false;
         SpeedUnlocked = false;
         DamageUnlocked = false;
         jumpUnlocked = false;
-        glitchUnlocked = false;
-        timeUnlocked = false;
+        fireBallUnlocked = false;
+        levitateUnlcoked = false;
     }
 
-    public void UnlockBarge()
+    public void UnlockHealthSplash()
     {
         if (pointHandler.skillPoints > 5)
         {
             pointHandler.skillPoints = pointHandler.skillPoints - 5;
-            BargeUnlocked = true;
+            healthSplashPotUnlocked = true;
         }
     }
 
@@ -59,21 +59,21 @@ public class SorceressSpecialistSkillUnlock : MonoBehaviour
         }
     }
 
-    public void UnlockGlitch()
+    public void UnlockFireBall()
     {
         if (pointHandler.skillPoints > 10)
         {
             pointHandler.skillPoints = pointHandler.skillPoints - 10;
-            glitchUnlocked = true;
+            fireBallUnlocked = true;
         }
     }
 
-    public void UnlockSlowDownTime()
+    public void UnlockLevitate()
     {
         if (pointHandler.skillPoints > 10)
         {
             pointHandler.skillPoints = pointHandler.skillPoints - 10;
-            timeUnlocked = true;
+            levitateUnlcoked = true;
         }
     }
 }

@@ -9,8 +9,8 @@ public class EnemyController : MonoBehaviour
     public NavMeshAgent agent;               
     public float startWaitTime = 3;               
     public float timeToRotate = 1;                
-    public float walkSpeed = 8;                    
-    public float runSpeed = 14;
+    public float walkSpeed = 6;                    
+    public float runSpeed = 15;
     public float enemyHealth = 5;
 
     public float viewRadius = 15;                 

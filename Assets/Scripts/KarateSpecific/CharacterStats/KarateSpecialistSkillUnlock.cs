@@ -6,29 +6,29 @@ public class KarateSpecialistSkillUnlock : MonoBehaviour
 {
     public SkillPointHandler pointHandler;
 
-    public bool BargeUnlocked;
+    public bool woodBreakUnlocked;
     public bool SpeedUnlocked;
     public bool DamageUnlocked;
     public bool jumpUnlocked;
-    public bool glitchUnlocked;
-    public bool timeUnlocked;
+    public bool wallRunningUnlocked;
+    public bool spinKickUnlocked;
 
     public void Start()
     {
-        BargeUnlocked = false;
+        woodBreakUnlocked = false;
         SpeedUnlocked = false;
         DamageUnlocked = false;
         jumpUnlocked = false;
-        glitchUnlocked = false;
-        timeUnlocked = false;
+        wallRunningUnlocked = false;
+        spinKickUnlocked = false;
     }
 
-    public void UnlockBarge()
+    public void UnlockWoodBreak()
     {
         if (pointHandler.skillPoints > 5)
         {
             pointHandler.skillPoints = pointHandler.skillPoints - 5;
-            BargeUnlocked = true;
+            woodBreakUnlocked = true;
         }
     }
 
@@ -59,21 +59,21 @@ public class KarateSpecialistSkillUnlock : MonoBehaviour
         }
     }
 
-    public void UnlockGlitch()
+    public void UnlockWallRun()
     {
         if (pointHandler.skillPoints > 10)
         {
             pointHandler.skillPoints = pointHandler.skillPoints - 10;
-            glitchUnlocked = true;
+            wallRunningUnlocked = true;
         }
     }
 
-    public void UnlockSlowDownTime()
+    public void UnlockSpinKick()
     {
         if (pointHandler.skillPoints > 10)
         {
             pointHandler.skillPoints = pointHandler.skillPoints - 10;
-            timeUnlocked = true;
+            spinKickUnlocked = true;
         }
     }
 }

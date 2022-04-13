@@ -8,9 +8,6 @@ public class CharacterMovement : MonoBehaviour
     public WarriorClass warrior;
     public Fracture fracture;
     public WarriorAbilityEffects warriorAbilityEffects;
-    public SorceressAbilityEffects sorceressAbilityEffects;
-    public KarateAbilityEffects karateAbilityEffects;
-    public BruteAbilityEffects bruteAbilityEffects;
     public LevelSelect levelSelect;
     public StaminaBar staminaBar;
 
@@ -41,22 +38,7 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (levelSelect.Lvl1 == true)
-        {
-            warriorAbilityEffects.WarriorEffects();
-        }
-        else if (levelSelect.Lvl2 == true)
-        {
-            bruteAbilityEffects.BruteEffects();
-        }
-        else if (levelSelect.Lvl3 == true)
-        {
-            karateAbilityEffects.KarateEffects();
-        }
-        else if (levelSelect.Lvl4 == true)
-        {
-            sorceressAbilityEffects.SorceressEffects();
-        }
+        warriorAbilityEffects.WarriorEffects();
         PlayerControl();
     }
 

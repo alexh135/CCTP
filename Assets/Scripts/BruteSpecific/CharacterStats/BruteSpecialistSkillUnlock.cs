@@ -6,29 +6,29 @@ public class BruteSpecialistSkillUnlock : MonoBehaviour
 {
     public SkillPointHandler pointHandler;
 
-    public bool BargeUnlocked;
+    public bool wreckingBallUnlocked;
     public bool SpeedUnlocked;
     public bool DamageUnlocked;
     public bool jumpUnlocked;
-    public bool glitchUnlocked;
-    public bool timeUnlocked;
+    public bool groundAndPoundUnlocked;
+    public bool rockThrowUnlocked;
 
     public void Start()
     {
-        BargeUnlocked = false;
+        wreckingBallUnlocked = false;
         SpeedUnlocked = false;
         DamageUnlocked = false;
         jumpUnlocked = false;
-        glitchUnlocked = false;
-        timeUnlocked = false;
+        groundAndPoundUnlocked = false;
+        rockThrowUnlocked = false;
     }
 
-    public void UnlockBarge()
+    public void UnlockWreckingBall()
     {
         if (pointHandler.skillPoints > 5)
         {
             pointHandler.skillPoints = pointHandler.skillPoints - 5;
-            BargeUnlocked = true;
+            wreckingBallUnlocked = true;
         }
     }
 
@@ -59,21 +59,21 @@ public class BruteSpecialistSkillUnlock : MonoBehaviour
         }
     }
 
-    public void UnlockGlitch()
+    public void UnlockGroundAndPound()
     {
         if (pointHandler.skillPoints > 10)
         {
             pointHandler.skillPoints = pointHandler.skillPoints - 10;
-            glitchUnlocked = true;
+            groundAndPoundUnlocked = true;
         }
     }
 
-    public void UnlockSlowDownTime()
+    public void UnlockRockThrow()
     {
         if (pointHandler.skillPoints > 10)
         {
             pointHandler.skillPoints = pointHandler.skillPoints - 10;
-            timeUnlocked = true;
+            rockThrowUnlocked = true;
         }
     }
 }
