@@ -14,13 +14,6 @@ public class XPBar : MonoBehaviour
 
     public bool levelUp;
 
-    [Range(1f, 300f)]
-    public float additionMultiplier = 300;
-    [Range(2f, 4f)]
-    public float powerMultiplier = 2;
-    [Range(7f, 4f)]
-    public float divisionMultiplier = 7;
-
     public void Start()
     {
         slider.value = currentXP;
@@ -42,9 +35,12 @@ public class XPBar : MonoBehaviour
         }
         if (levelUp)
         {
-            level = level + 1;
-            skillPointHandler.skillPoints++;
-            levelUp = false;
+            if (level != 20)
+            {
+                level = level + 1;
+                skillPointHandler.skillPoints++;
+                levelUp = false;
+            }
         }
     }
 }

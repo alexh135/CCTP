@@ -19,8 +19,9 @@ public class EnemyController : MonoBehaviour
     public LayerMask obstacleMask;                 
     public float meshResolution = 1.0f;            
     public int edgeIterations = 4;                 
-    public float edgeDistance = 0.5f;               
+    public float edgeDistance = 0.5f;
 
+    public int kills;
 
     public Transform[] waypoints;                  
     int m_CurrentWaypointIndex;                 
@@ -75,6 +76,7 @@ public class EnemyController : MonoBehaviour
         {
             enemyHealth = 0;
             Destroy(agent);
+            kills = kills + 1;
         }
     }
 

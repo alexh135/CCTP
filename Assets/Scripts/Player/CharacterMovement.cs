@@ -25,6 +25,8 @@ public class CharacterMovement : MonoBehaviour
     public bool enemyTakeDamage;
     public bool sprinting;
 
+    public int timesSprinted;
+
     public EnemyController enemyController;
     public SkillPointHandler pointHandler;
 
@@ -33,6 +35,7 @@ public class CharacterMovement : MonoBehaviour
         canKillEnemy = false;
         enemyTakeDamage = false;
         sprinting = false;
+        timesSprinted = 0;
     }
 
     // Update is called once per frame
@@ -66,6 +69,11 @@ public class CharacterMovement : MonoBehaviour
                 staminaBar.UseStamina(1);
                 staminaBar.canRegen = false;
             }
+        }
+
+        if (staminaBar.staminaBar.value == 0)
+        {
+            timesSprinted = timesSprinted + 1;
         }
 
         if (Input.GetButtonDown("Jump") && isGrounded)
