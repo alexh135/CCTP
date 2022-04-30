@@ -13,6 +13,10 @@ public class WarriorSpecialistSkillUnlock : MonoBehaviour
     public bool jumpUnlocked;
     public bool glitchUnlocked;
     public bool timeUnlocked;
+    public bool axeUnlocked;
+    public bool shieldUnlocked;
+    public bool spearUnlocked;
+    public bool healUnlocked;
 
     public void Start()
     {
@@ -22,6 +26,10 @@ public class WarriorSpecialistSkillUnlock : MonoBehaviour
         jumpUnlocked = false;
         glitchUnlocked = false;
         timeUnlocked = false;
+        axeUnlocked = false;
+        shieldUnlocked = false;
+        spearUnlocked = false;
+        healUnlocked = false;
     }
 
     public void UnlockBarge()
@@ -75,6 +83,42 @@ public class WarriorSpecialistSkillUnlock : MonoBehaviour
         {
             pointHandler.skillPoints = pointHandler.skillPoints - 10;
             timeUnlocked = true;
+        }
+    }
+
+    public void UnlockAxeThrow()
+    {
+        if (pointHandler.skillPoints > 10)
+        {
+            pointHandler.skillPoints = pointHandler.skillPoints - 10;
+            axeUnlocked = true;
+        }
+    }
+
+    public void UnlockShield()
+    {
+        if (pointHandler.skillPoints > 10)
+        {
+            pointHandler.skillPoints = pointHandler.skillPoints - 10;
+            shieldUnlocked = true;
+        }
+    }
+
+    public void UnlockSpearThrow()
+    {
+        if (pointHandler.skillPoints > 10)
+        {
+            pointHandler.skillPoints = pointHandler.skillPoints - 10;
+            spearUnlocked = true;
+        }
+    }
+
+    public void UnlockHeal()
+    {
+        if (pointHandler.skillPoints > 15)
+        {
+            pointHandler.skillPoints = pointHandler.skillPoints - 10;
+            healUnlocked = true;
         }
     }
 }

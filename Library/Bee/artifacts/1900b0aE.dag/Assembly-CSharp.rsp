@@ -380,6 +380,7 @@
 "Assets/Scripts/SorceressSpecific/CharacterStats/SorceressSpecialistSkillUnlock.cs"
 "Assets/Scripts/SorceressSpecific/CharacterStats/SorceressStatUpgrades.cs"
 "Assets/Scripts/SorceressSpecific/SorceressMovement.cs"
+"Assets/Scripts/WarriorSpecific/CharacterStats/SpecialistSkillSelection.cs"
 "Assets/Scripts/WarriorSpecific/CharacterStats/WarriorAbilityEffects.cs"
 "Assets/Scripts/WarriorSpecific/CharacterStats/WarriorClass.cs"
 "Assets/Scripts/WarriorSpecific/CharacterStats/WarriorGUI.cs"

@@ -156,7 +156,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -741,7 +741,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -963,7 +963,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1490,7 +1490,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2719,7 +2719,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 203534058}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1748218919}
+        m_TargetAssemblyTypeName: WarriorSpecialistSkillUnlock, Assembly-CSharp
+        m_MethodName: UnlockAxeThrow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &203534058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3010,8 +3022,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SpecialistSkillUnlock, Assembly-CSharp
+      - m_Target: {fileID: 1748218919}
+        m_TargetAssemblyTypeName: WarriorSpecialistSkillUnlock, Assembly-CSharp
         m_MethodName: UnlockDoubleDamage
         m_Mode: 1
         m_Arguments:
@@ -4038,7 +4050,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4769,7 +4781,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6262,7 +6274,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6599,7 +6611,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8184,7 +8196,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &743317486
 Transform:
   m_ObjectHideFlags: 0
@@ -8988,7 +9000,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &801280407
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9146,7 +9158,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9891,7 +9903,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -10889,13 +10901,14 @@ GameObject:
   - component: {fileID: 1005411222}
   - component: {fileID: 1005411221}
   - component: {fileID: 1005411220}
+  - component: {fileID: 1005411224}
   m_Layer: 5
   m_Name: SpecialistSkillCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1005411220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10983,6 +10996,66 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1005411224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005411219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fe0e53f88a486e46bc24801ee559a3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  warriorSpecialistSkillUnlock: {fileID: 1748218919}
+  skillPointsHandler: {fileID: 2110409173}
+  warriorAbilityEffects: {fileID: 0}
+  warriorClass: {fileID: 0}
+  characterMovement: {fileID: 0}
+  bargeSlider: {fileID: 499107426}
+  speedSlider: {fileID: 619513929}
+  damageSlider: {fileID: 214198212}
+  jumpSlider: {fileID: 1379677125}
+  glitchSlider: {fileID: 186930975}
+  timeSlider: {fileID: 2125938096}
+  axeSlider: {fileID: 1394777956}
+  shieldSlider: {fileID: 1709516434}
+  spearSlider: {fileID: 1376679027}
+  healSlider: {fileID: 783961510}
+  bargeToggle: {fileID: 1422087043}
+  speedToggle: {fileID: 315096042}
+  damageToggle: {fileID: 1225476013}
+  jumpToggle: {fileID: 838875662}
+  glitchToggle: {fileID: 1441428731}
+  timeToggle: {fileID: 26528498}
+  axeToggle: {fileID: 1082671112}
+  shieldToggle: {fileID: 1275971219}
+  spearToggle: {fileID: 40812858}
+  healToggle: {fileID: 1005406832}
+  bargeSelected: 0
+  speedSelected: 0
+  damageSelected: 0
+  jumpSelected: 0
+  glitchSelected: 0
+  timeSelected: 0
+  axeSelected: 0
+  shieldSelected: 0
+  spearSelected: 0
+  healSelected: 0
+  bargeUpgrade: 0
+  speedUpgrade: 0
+  damageUpgrade: 0
+  jumpUpgrade: 0
+  glitchUpgrade: 0
+  timeUpgrade: 0
+  axeUpgrade: 0
+  shieldUpgrade: 0
+  spearUpgrade: 0
+  healUpgrade: 0
+  maxUpgrade: 0
+  skillsSelected: 0
+  maxSkillsSelected: 4
 --- !u!1 &1015079740
 GameObject:
   m_ObjectHideFlags: 0
@@ -11223,7 +11296,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -11434,7 +11507,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -11834,7 +11907,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1101063185}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1748218919}
+        m_TargetAssemblyTypeName: WarriorSpecialistSkillUnlock, Assembly-CSharp
+        m_MethodName: UnlockShield
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1101063185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12341,7 +12426,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -12502,7 +12587,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1191141872}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1748218919}
+        m_TargetAssemblyTypeName: WarriorSpecialistSkillUnlock, Assembly-CSharp
+        m_MethodName: UnlockHeal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1191141872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13967,7 +14064,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -14868,7 +14965,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -15930,7 +16027,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -16098,7 +16195,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -16704,8 +16801,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SpecialistSkillUnlock, Assembly-CSharp
+      - m_Target: {fileID: 1748218919}
+        m_TargetAssemblyTypeName: WarriorSpecialistSkillUnlock, Assembly-CSharp
         m_MethodName: UnlockBarge
         m_Mode: 1
         m_Arguments:
@@ -16933,7 +17030,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1529916659}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1748218919}
+        m_TargetAssemblyTypeName: WarriorSpecialistSkillUnlock, Assembly-CSharp
+        m_MethodName: UnlockSpearThrow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1529916659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17055,8 +17164,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SpecialistSkillUnlock, Assembly-CSharp
+      - m_Target: {fileID: 1748218919}
+        m_TargetAssemblyTypeName: WarriorSpecialistSkillUnlock, Assembly-CSharp
         m_MethodName: UnlockGlitch
         m_Mode: 1
         m_Arguments:
@@ -17213,7 +17322,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -18044,8 +18153,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SpecialistSkillUnlock, Assembly-CSharp
+      - m_Target: {fileID: 1748218919}
+        m_TargetAssemblyTypeName: WarriorSpecialistSkillUnlock, Assembly-CSharp
         m_MethodName: UnlockSlowDownTime
         m_Mode: 1
         m_Arguments:
@@ -18628,8 +18737,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SpecialistSkillUnlock, Assembly-CSharp
+      - m_Target: {fileID: 1748218919}
+        m_TargetAssemblyTypeName: WarriorSpecialistSkillUnlock, Assembly-CSharp
         m_MethodName: UnlockDoubleJump
         m_Mode: 1
         m_Arguments:
@@ -19217,6 +19326,7 @@ GameObject:
   - component: {fileID: 1748218920}
   - component: {fileID: 1748218919}
   - component: {fileID: 1748218927}
+  - component: {fileID: 1748218928}
   m_Layer: 0
   m_Name: StatHandler
   m_TagString: Untagged
@@ -19307,6 +19417,10 @@ MonoBehaviour:
   jumpUnlocked: 0
   glitchUnlocked: 0
   timeUnlocked: 0
+  axeUnlocked: 0
+  shieldUnlocked: 0
+  spearUnlocked: 0
+  healUnlocked: 0
 --- !u!114 &1748218920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19320,19 +19434,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   specialistSkillUnlock: {fileID: 1748218919}
-  warriorClass: {fileID: 0}
-  enemyController: {fileID: 0}
-  characterMovement: {fileID: 0}
+  warriorClass: {fileID: 1748218915}
+  enemyController: {fileID: 765725136}
+  characterMovement: {fileID: 12420098}
+  SpecialistSkillSelection: {fileID: 0}
   bargeDIstance: 10
   speedBoostTimer: 0
   speedBoosting: 0
+  sprintSpeedMultiplier: 0
   doubleDamageTimer: 0
   doubleDamage: 0
+  damageBoostMultiplier: 0
   doubleJumpTimer: 0
   doubleJumping: 0
+  doubleJumpMultiplier: 0
   slowDownTimer: 0
   slowingTime: 0
+  slowSpeedMultiplier: 0
   glitchDistance: 10
+  axe: {fileID: 0}
+  canThrowAxe: 0
+  axeDamage: 0
+  shield: {fileID: 0}
+  canUseShield: 0
+  shieldHealth: 0
+  spear: {fileID: 0}
+  canThrowSpear: 0
+  spearDamage: 0
+  canHeal: 0
+  healAmount: 0
 --- !u!114 &1748218921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19468,8 +19598,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d77d1c20b5c4d9408ecd258b32ffcba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterMovement: {fileID: 0}
-  warriorClass: {fileID: 0}
+  characterMovement: {fileID: 12420098}
+  warriorClass: {fileID: 1748218915}
+--- !u!114 &1748218928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748218914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fba160deccad024e8cce903ceb9bbdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  specialistSkillUnlock: {fileID: 1748218919}
+  warriorClass: {fileID: 1748218915}
+  enemyController: {fileID: 765725136}
+  characterMovement: {fileID: 12420098}
+  SpecialistSkillSelection: {fileID: 0}
+  bargeDIstance: 10
+  speedBoostTimer: 0
+  speedBoosting: 0
+  sprintSpeedMultiplier: 0
+  doubleDamageTimer: 0
+  doubleDamage: 0
+  damageBoostMultiplier: 0
+  doubleJumpTimer: 0
+  doubleJumping: 0
+  doubleJumpMultiplier: 0
+  slowDownTimer: 0
+  slowingTime: 0
+  slowSpeedMultiplier: 0
+  glitchDistance: 10
+  axe: {fileID: 0}
+  canThrowAxe: 0
+  axeDamage: 0
+  shield: {fileID: 0}
+  canUseShield: 0
+  shieldHealth: 0
+  spear: {fileID: 0}
+  canThrowSpear: 0
+  spearDamage: 0
+  canHeal: 0
+  healAmount: 0
 --- !u!1 &1748360338
 GameObject:
   m_ObjectHideFlags: 0
@@ -20078,7 +20250,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -20779,7 +20951,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -20904,8 +21076,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SpecialistSkillUnlock, Assembly-CSharp
+      - m_Target: {fileID: 1748218919}
+        m_TargetAssemblyTypeName: WarriorSpecialistSkillUnlock, Assembly-CSharp
         m_MethodName: UnlockSpeedBoost
         m_Mode: 1
         m_Arguments:
@@ -21218,7 +21390,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -25080,6 +25252,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2893830335156807327, guid: 0940515386c88ea41b34a407b0cf7a8b, type: 3}
+      propertyPath: m_TagString
+      value: Spear
+      objectReference: {fileID: 0}
     - target: {fileID: 4921334812911662978, guid: 0940515386c88ea41b34a407b0cf7a8b, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -25188,6 +25364,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6185788449337105817, guid: 0940515386c88ea41b34a407b0cf7a8b, type: 3}
+      propertyPath: m_TagString
+      value: Axe
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0940515386c88ea41b34a407b0cf7a8b, type: 3}
 --- !u!1 &5052595370915483673
@@ -25242,7 +25422,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -26208,7 +26388,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

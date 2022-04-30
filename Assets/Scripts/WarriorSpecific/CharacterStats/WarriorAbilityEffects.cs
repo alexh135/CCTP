@@ -8,26 +8,70 @@ public class WarriorAbilityEffects : MonoBehaviour
     public WarriorClass warriorClass;
     public EnemyController enemyController;
     public CharacterMovement characterMovement;
+    public SpecialistSkillSelection SpecialistSkillSelection;
 
     public float bargeDIstance = 10f;
 
     public float speedBoostTimer;
     public bool speedBoosting;
+    public int sprintSpeedMultiplier;
 
     public float doubleDamageTimer;
     public bool doubleDamage;
+    public int damageBoostMultiplier;
 
     public float doubleJumpTimer;
     public bool doubleJumping;
+    public int doubleJumpMultiplier;
 
     public float slowDownTimer;
     public bool slowingTime;
+    public int slowSpeedMultiplier;
 
     public float glitchDistance = 10f;
 
+    public GameObject axe;
+    public bool canThrowAxe;
+    public int axeDamage;
+    public float axeThrowCoolDownTimer;
+    public float axeThrowForce;
+    public float axeThrowUpwardForce;
+
+    public GameObject shield;
+    public bool canUseShield;
+    public float shieldTimer;
+    public float shieldTimeLimiter;
+
+    public GameObject spear;
+    public bool canThrowSpear;
+    public int spearDamage;
+    public float spearThrowCoolDownTimer;
+    public float spearThrowForce;
+    public float spearThrowUpwardForce;
+
+    public Transform attackPoint;
+    public Transform cam;
+
+    public bool canHeal;
+    public int healAmount;
+
+    public void Start()
+    {
+        sprintSpeedMultiplier = 2;
+        damageBoostMultiplier = 2;
+        doubleJumpMultiplier = 2;
+        slowSpeedMultiplier = 2;
+        healAmount = 4;
+        shieldTimeLimiter = 5;
+
+        axe.SetActive(false);
+        shield.SetActive(false);
+        spear.SetActive(false);
+    }
+
     public void WarriorEffects()
     {
-        if (specialistSkillUnlock.BargeUnlocked)
+        if (SpecialistSkillSelection.bargeSelected)
         {
             if (Input.GetKeyDown("1"))
             {
@@ -36,7 +80,7 @@ public class WarriorAbilityEffects : MonoBehaviour
                 player.transform.position = destination;
             }
         }
-        if (specialistSkillUnlock.SpeedUnlocked)
+        if (SpecialistSkillSelection.speedSelected)
         {
             if (Input.GetKeyDown("2"))
             {
@@ -52,10 +96,10 @@ public class WarriorAbilityEffects : MonoBehaviour
             }
             if (speedBoosting)
             {
-                warriorClass.Speed = warriorClass.Speed * 2;
+                warriorClass.Speed = warriorClass.Speed * sprintSpeedMultiplier;
             }
         }
-        if (specialistSkillUnlock.DamageUnlocked)
+        if (SpecialistSkillSelection.damageSelected)
         {
             if (Input.GetKeyDown("3"))
             {
@@ -71,12 +115,12 @@ public class WarriorAbilityEffects : MonoBehaviour
             }
             if (doubleDamage)
             {
-                warriorClass.Strength = warriorClass.Strength * 2;
+                warriorClass.Strength = warriorClass.Strength * damageBoostMultiplier;
             }
         }
-        if (specialistSkillUnlock.jumpUnlocked)
+        if (SpecialistSkillSelection.jumpSelected)
         {
-            if (Input.GetKeyDown("3"))
+            if (Input.GetKeyDown("4"))
             {
                 doubleJumpTimer += Time.deltaTime;
                 if (doubleJumpTimer <= 5)
@@ -90,10 +134,10 @@ public class WarriorAbilityEffects : MonoBehaviour
             }
             if (doubleJumping)
             {
-                characterMovement.jumpHeight = characterMovement.jumpHeight * 2;
+                characterMovement.jumpHeight = characterMovement.jumpHeight * doubleJumpMultiplier;
             }
         }
-        if (specialistSkillUnlock.glitchUnlocked)
+        if (SpecialistSkillSelection.glitchSelected)
         {
             if (Input.GetKeyDown("5"))
             {
@@ -102,7 +146,7 @@ public class WarriorAbilityEffects : MonoBehaviour
                 player.transform.position = destination;
             }
         }
-        if (specialistSkillUnlock.timeUnlocked)
+        if (SpecialistSkillSelection.timeSelected)
         {
             if (Input.GetKeyDown("6"))
             {
@@ -115,11 +159,88 @@ public class WarriorAbilityEffects : MonoBehaviour
             else if (slowDownTimer >= 5)
             {
                 slowingTime = false;
+                slowDownTimer = 0;
             }
             if (slowingTime)
             {
-                enemyController.runSpeed = enemyController.runSpeed / 3;
-                enemyController.walkSpeed = enemyController.walkSpeed / 3;
+                enemyController.runSpeed = enemyController.runSpeed / slowSpeedMultiplier;
+                enemyController.walkSpeed = enemyController.walkSpeed / slowSpeedMultiplier;
+            }
+            if (!slowingTime)
+            {
+                slowDownTimer = 0;
+            }
+        }
+        if (SpecialistSkillSelection.axeSelected)
+        {
+            canThrowAxe = true;
+            if (canThrowAxe)
+            {
+                if (Input.GetKeyDown("7"))
+                {
+                    GameObject Axe = Instantiate(axe, attackPoint.position, cam.rotation);
+                    Rigidbody AxeRb = Axe.GetComponent<Rigidbody>();
+                    Vector3 forceDirection = cam.transform.forward;
+                    RaycastHit hit;
+                    if (Physics.Raycast(cam.position, cam.forward, out hit, 500f))
+                    {
+                        forceDirection = (hit.point - attackPoint.position).normalized;
+                    }
+                    Vector3 force = forceDirection * axeThrowForce + transform.up * axeThrowUpwardForce;
+                    AxeRb.AddForce(force, ForceMode.Impulse);
+                    canThrowAxe = false;
+                    axeThrowCoolDownTimer += Time.deltaTime;
+                    if (axeThrowCoolDownTimer == 5)
+                    {
+                        canThrowAxe = true;
+                        axeThrowCoolDownTimer = 0;
+                        axe.SetActive(false);
+                    }
+                }
+            }
+        }
+        if (SpecialistSkillSelection.shieldSelected)
+        {
+            if (Input.GetKeyDown("8"))
+            {
+                shieldTimer += Time.deltaTime;
+                if (shieldTimer <= shieldTimeLimiter)
+                {
+                    shield.SetActive(true);
+                }
+                else if (shieldTimer >= shieldTimeLimiter)
+                {
+                    shield.SetActive(false);
+                    shieldTimer = 0;
+                }
+            }
+        }
+        if (SpecialistSkillSelection.spearSelected)
+        {
+            canThrowSpear = true;
+            if (canThrowSpear)
+            {
+                if (Input.GetKeyDown("7"))
+                {
+                    GameObject Spear = Instantiate(spear, attackPoint.position, cam.rotation);
+                    Rigidbody SpearRb = Spear.GetComponent<Rigidbody>();
+                    Vector3 force = cam.transform.forward * spearThrowForce + transform.up * spearThrowUpwardForce;
+                    SpearRb.AddForce(force, ForceMode.Impulse);
+                    canThrowSpear = false;
+                    spearThrowCoolDownTimer += Time.deltaTime;
+                    if (spearThrowCoolDownTimer == 5)
+                    {
+                        canThrowSpear = true;
+                        spearThrowCoolDownTimer = 0;
+                    }
+                }
+            }
+        }
+        if (SpecialistSkillSelection.healSelected)
+        {
+            if (Input.GetKeyDown("0"))
+            {
+                warriorClass.Health = warriorClass.Health + healAmount;
             }
         }
     }

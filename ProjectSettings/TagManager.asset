@@ -8,6 +8,8 @@ TagManager:
   - Ground
   - 2DTarget
   - 3DTarget
+  - Axe
+  - Spear
   layers:
   - Default
   - TransparentFX
