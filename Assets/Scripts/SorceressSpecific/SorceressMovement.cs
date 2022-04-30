@@ -9,7 +9,7 @@ public class SorceressMovement : MonoBehaviour
     public Fracture fracture;
     public SorceressAbilityEffects sorceressAbilityEffects;
     public LevelSelect levelSelect;
-    public StaminaBar staminaBar;
+    public SorceressStaminaBar sorceressStaminaBar;
 
     public float sprintSpeed = 12f;
     public float gravity = -9.81f;
@@ -25,7 +25,7 @@ public class SorceressMovement : MonoBehaviour
     public bool enemyTakeDamage;
     public bool sprinting;
 
-    public EnemyController enemyController;
+    public SorceressEnemyController enemyController;
     public SkillPointHandler pointHandler;
 
     public void Start()
@@ -58,13 +58,13 @@ public class SorceressMovement : MonoBehaviour
 
         controller.Move(move * sorceressClass.Speed * Time.deltaTime);
 
-        if (staminaBar.publicCurrentStamina >= 2 && isGrounded)
+        if (sorceressStaminaBar.publicCurrentStamina >= 2 && isGrounded)
         {
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 controller.Move(move * (sorceressClass.Speed + sprintSpeed) * Time.deltaTime);
-                staminaBar.UseStamina(1);
-                staminaBar.canRegen = false;
+                sorceressStaminaBar.UseStamina(1);
+                sorceressStaminaBar.canRegen = false;
             }
          }
        

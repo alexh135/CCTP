@@ -12,11 +12,13 @@ public class BasicSkillCanvas : MonoBehaviour
         basicSkills.enabled = false;
     }
 
+    //Function for opening up the basic skills menu which is attached to a buttons on click event
     public void OpenBasicSkills()
     {
         basicSkills.enabled = true;
     }
 
+    //Function for closing the basic skills menu which is attached to a buttons on click event
     public void CloseBasicSkills()
     {
         basicSkills.enabled = false;

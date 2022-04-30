@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class BaseWarriorStats : MonoBehaviour
 {
-    //Stats
+    // Initialise player stats
     private int stamina = 0;
     private int health = 0;
     private int speed = 0;
     private int strength = 0;
     private int intellect = 0;
 
+    // getter and setters for each player stat
     public int Stamina { get { return stamina; } set { stamina = value; } }
 
     public int Strength { get { return strength; } set { strength = value; } }

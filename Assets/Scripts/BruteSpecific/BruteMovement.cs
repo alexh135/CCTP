@@ -9,7 +9,9 @@ public class BruteMovement : MonoBehaviour
     public Fracture fracture;
     public BruteAbilityEffects bruteAbilityEffects;
     public LevelSelect levelSelect;
-    public StaminaBar staminaBar;
+    public BruteStaminaBar bruteStaminaBar;
+    public BruteEnemyController enemyController;
+    public SkillPointHandler pointHandler;
 
     public float sprintSpeed = 12f;
     public float gravity = -9.81f;
@@ -25,14 +27,15 @@ public class BruteMovement : MonoBehaviour
     public bool enemyTakeDamage;
     public bool sprinting;
 
-    public EnemyController enemyController;
-    public SkillPointHandler pointHandler;
+    // public integer that tracks the amount of times the player has sprinted for passive stat upgrades
+    public int timesSprinted;
 
     public void Start()
     {
         canKillEnemy = false;
         enemyTakeDamage = false;
         sprinting = false;
+        timesSprinted = 0;
     }
 
     // Update is called once per frame
@@ -44,30 +47,42 @@ public class BruteMovement : MonoBehaviour
 
     public void PlayerControl()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
 
+        // get the inputs for up, down, left and right
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
+        // vector 3 used to store the direction of movement
         Vector3 move = transform.right * x + transform.forward * z;
 
+        // player moves at speed taken from warrior class
         controller.Move(move * bruteClass.Speed * Time.deltaTime);
 
-        if (staminaBar.publicCurrentStamina >= 2 && isGrounded)
+        // if player has stamina and is on the ground
+        if (bruteStaminaBar.publicCurrentStamina >= 2 && isGrounded)
         {
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 controller.Move(move * (bruteClass.Speed + sprintSpeed) * Time.deltaTime);
-                staminaBar.UseStamina(1);
-                staminaBar.canRegen = false;
+                bruteStaminaBar.UseStamina(1);
+                bruteStaminaBar.canRegen = false;
             }
         }
 
+        // if player has 0 stamina left
+        if (bruteStaminaBar.staminaBar.value == 0)
+        {
+            // add 1 to the number of time the player has sprinted
+            timesSprinted = timesSprinted + 1;
+        }
+
+        // if player presses the jump key (space) and player is on the ground
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
@@ -77,8 +92,10 @@ public class BruteMovement : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
+        // if the player is within range of the enemy
         if (canKillEnemy)
         {
+            // if player left clicks
             if (Input.GetMouseButtonDown(0))
             {
                 Debug.Log("Enemy Killed");

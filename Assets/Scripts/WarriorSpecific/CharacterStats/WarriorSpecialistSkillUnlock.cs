@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class WarriorSpecialistSkillUnlock : MonoBehaviour
 {
+    // reference to other scripts
     public SkillPointHandler pointHandler;
     public WarriorClass warrior;
 
+    // references to public bool variables
     public bool BargeUnlocked;
     public bool SpeedUnlocked;
     public bool DamageUnlocked;
@@ -20,6 +22,7 @@ public class WarriorSpecialistSkillUnlock : MonoBehaviour
 
     public void Start()
     {
+        // bool variables given value
         BargeUnlocked = false;
         SpeedUnlocked = false;
         DamageUnlocked = false;
@@ -34,8 +37,10 @@ public class WarriorSpecialistSkillUnlock : MonoBehaviour
 
     public void UnlockBarge()
     {
+        // if skill points value is greater than 5
         if (pointHandler.skillPoints > 5)
         {
+            // take off 5 skill points from points value
             pointHandler.skillPoints = pointHandler.skillPoints - 5;
             BargeUnlocked = true;
         }
@@ -43,8 +48,10 @@ public class WarriorSpecialistSkillUnlock : MonoBehaviour
 
     public void UnlockSpeedBoost()
     {
+        // if skill points value is greater than 5
         if (pointHandler.skillPoints > 5)
         {
+            // take off 5 skill points from points value
             pointHandler.skillPoints = pointHandler.skillPoints - 5;
             SpeedUnlocked = true;
         }
@@ -52,8 +59,10 @@ public class WarriorSpecialistSkillUnlock : MonoBehaviour
 
     public void UnlockDoubleDamage()
     {
+        // if skill points value is greater than 10
         if (pointHandler.skillPoints > 10)
         {
+            // take off 10 skill points from points value
             pointHandler.skillPoints = pointHandler.skillPoints - 10;
             DamageUnlocked = true;
         }
@@ -61,8 +70,10 @@ public class WarriorSpecialistSkillUnlock : MonoBehaviour
 
     public void UnlockDoubleJump()
     {
+        // if skill points value is greater than 5
         if (pointHandler.skillPoints > 5)
         {
+            // take off 5 skill points from points value
             pointHandler.skillPoints = pointHandler.skillPoints - 5;
             jumpUnlocked = true;
         }
@@ -70,8 +81,10 @@ public class WarriorSpecialistSkillUnlock : MonoBehaviour
 
     public void UnlockGlitch()
     {
+        // if skill points value is greater than 10
         if (pointHandler.skillPoints > 10)
         {
+            // take off 10 skill points from points value
             pointHandler.skillPoints = pointHandler.skillPoints - 10;
             glitchUnlocked = true;
         }
@@ -79,8 +92,10 @@ public class WarriorSpecialistSkillUnlock : MonoBehaviour
 
     public void UnlockSlowDownTime()
     {
+        // if skill points value is greater than 10
         if (pointHandler.skillPoints > 10)
         {
+            // take off 10 skill points from points value
             pointHandler.skillPoints = pointHandler.skillPoints - 10;
             timeUnlocked = true;
         }
@@ -88,8 +103,10 @@ public class WarriorSpecialistSkillUnlock : MonoBehaviour
 
     public void UnlockAxeThrow()
     {
+        // if skill points value is greater than 10
         if (pointHandler.skillPoints > 10)
         {
+            // take off 10 skill points from points value
             pointHandler.skillPoints = pointHandler.skillPoints - 10;
             axeUnlocked = true;
         }
@@ -97,8 +114,10 @@ public class WarriorSpecialistSkillUnlock : MonoBehaviour
 
     public void UnlockShield()
     {
+        // if skill points value is greater than 10
         if (pointHandler.skillPoints > 10)
         {
+            // take off 10 skill points from points value
             pointHandler.skillPoints = pointHandler.skillPoints - 10;
             shieldUnlocked = true;
         }
@@ -106,8 +125,10 @@ public class WarriorSpecialistSkillUnlock : MonoBehaviour
 
     public void UnlockSpearThrow()
     {
+        // if skill points value is greater than 10
         if (pointHandler.skillPoints > 10)
         {
+            // take off 10 skill points from points value
             pointHandler.skillPoints = pointHandler.skillPoints - 10;
             spearUnlocked = true;
         }
@@ -115,8 +136,10 @@ public class WarriorSpecialistSkillUnlock : MonoBehaviour
 
     public void UnlockHeal()
     {
+        // if skill points value is greater than 15
         if (pointHandler.skillPoints > 15)
         {
+            // take off 15 skill points from points value
             pointHandler.skillPoints = pointHandler.skillPoints - 10;
             healUnlocked = true;
         }

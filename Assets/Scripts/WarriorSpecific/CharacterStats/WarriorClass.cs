@@ -6,6 +6,7 @@ public class WarriorClass : BaseWarriorStats
 {
     public WarriorClass()
     {
+        // warrior base stats
         Stamina = 10;
         Strength = 15;
         Health = 10;

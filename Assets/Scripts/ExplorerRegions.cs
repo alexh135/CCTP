@@ -24,7 +24,7 @@ public class ExplorerRegions : MonoBehaviour
     {
         foreach (GameObject region in regions)
         {
-            if (collider.gameObject.tag == "Player")
+            if (collider.tag == "Player")
             {
                 regionsExplored = regionsExplored + 1;
             }

@@ -9,7 +9,9 @@ public class KarateMovement : MonoBehaviour
     public Fracture fracture;
     public KarateAbilityEffects karateAbilityEffects;
     public LevelSelect levelSelect;
-    public StaminaBar staminaBar;
+    public KarateStaminaBar karateStaminaBar;
+    public KarateEnemyController enemyController;
+    public SkillPointHandler pointHandler;
 
     public float sprintSpeed = 12f;
     public float gravity = -9.81f;
@@ -25,14 +27,15 @@ public class KarateMovement : MonoBehaviour
     public bool enemyTakeDamage;
     public bool sprinting;
 
-    public EnemyController enemyController;
-    public SkillPointHandler pointHandler;
+    // public integer that tracks the amount of times the player has sprinted for passive stat upgrades
+    public int timesSprinted;
 
     public void Start()
     {
         canKillEnemy = false;
         enemyTakeDamage = false;
         sprinting = false;
+        timesSprinted = 0;
     }
 
     // Update is called once per frame
@@ -58,16 +61,24 @@ public class KarateMovement : MonoBehaviour
 
         controller.Move(move * karateClass.Speed * Time.deltaTime);
 
-        if (staminaBar.publicCurrentStamina >= 2 && isGrounded)
+        if (karateStaminaBar.publicCurrentStamina >= 2 && isGrounded)
         {
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 controller.Move(move * (karateClass.Speed + sprintSpeed) * Time.deltaTime);
-                staminaBar.UseStamina(1);
-                staminaBar.canRegen = false;
+                karateStaminaBar.UseStamina(1);
+                karateStaminaBar.canRegen = false;
             }
         }
 
+        // if player has 0 stamina left
+        if (karateStaminaBar.staminaBar.value == 0)
+        {
+            // add 1 to the number of time the player has sprinted
+            timesSprinted = timesSprinted + 1;
+        }
+
+        // if player presses the jump key (space) and player is on the ground
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
@@ -77,8 +88,10 @@ public class KarateMovement : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
+        // if the player is within range of the enemy
         if (canKillEnemy)
         {
+            // if player left clicks
             if (Input.GetMouseButtonDown(0))
             {
                 Debug.Log("Enemy Killed");
