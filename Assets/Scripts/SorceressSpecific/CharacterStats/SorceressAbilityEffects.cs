@@ -32,20 +32,25 @@ public class SorceressAbilityEffects : MonoBehaviour
 
     // variables for fire ball
     public GameObject fireBall;
-    public bool canFireFireBall;
-    public float fireBallCoolDown;
-    public int fireDamage = 10;
+    public bool canFireBall;
+    public float fireDamage = 8f;
+    public float fireBallCoolDownTimer;
+    public float fireBallThrowForce;
+    public float fireBallThrowUpwardForce;
 
     // variables for levitate
     public bool canLevitate;
     public float levitateCoolDown;
     public float levitateMaxTimer = 5f;
+    public Vector3 returnPoint;
 
     // variables for water ball
     public GameObject waterBall;
-    public bool canFireWaterBall;
-    public float waterBallCoolDown;
-    public int waterDamage = 6;
+    public bool canWaterBall;
+    public float waterDamage = 6f;
+    public float waterBallThrowCoolDownTimer;
+    public float waterBallThrowForce;
+    public float waterBallThrowUpwardForce;
 
     // variables for lightning
     public bool canFireLighting;
@@ -63,11 +68,18 @@ public class SorceressAbilityEffects : MonoBehaviour
     public float flyCoolDown;
     public float maxFlyTimer = 5;
 
+
+    public Transform attackPoint;
+    public Transform cam;
+
     public void Start()
     {
         sprintSpeedMultiplier = 2;
         damageBoostMultiplier = 2;
         doubleJumpMultiplier = 2;
+
+        waterBall.SetActive(false);
+        fireBall.SetActive(false);
     }
 
     public void SorceressEffects()
@@ -170,26 +182,36 @@ public class SorceressAbilityEffects : MonoBehaviour
         // if fire ball is selected
         if (sorceressSpecialistSelection.fireBallSelected)
         {
-            canFireFireBall = true;
-            if (canFireFireBall)
+            canFireBall = true;
+            if (canFireBall)
             {
-                // if player inputs 5
-                if (Input.GetKeyDown("5"))
+                // if player inputs 1
+                if (Input.GetKeyDown("1"))
                 {
-
-                    canFireFireBall = false;
-                    fireBallCoolDown += Time.deltaTime;
-                    if (fireBallCoolDown == 5)
+                    // spawn in wrecking ball
+                    GameObject WreckingBall = Instantiate(fireBall, attackPoint.position, cam.rotation);
+                    Rigidbody WreckingBallRb = WreckingBall.GetComponent<Rigidbody>();
+                    Vector3 forceDirection = cam.transform.forward;
+                    RaycastHit hit;
+                    // if wrecking ball hits an object
+                    if (Physics.Raycast(cam.position, cam.forward, out hit, 500f))
                     {
-                        canFireFireBall = true;
+                        forceDirection = (hit.point - attackPoint.position).normalized;
                     }
-                    if (fireBallCoolDown < 5)
+                    Vector3 force = forceDirection * fireBallThrowForce + transform.up * fireBallThrowUpwardForce;
+                    WreckingBallRb.AddForce(force, ForceMode.Impulse);
+                    canFireBall = false;
+                    // begin cool down timer
+                    fireBallCoolDownTimer += Time.deltaTime;
+                    // if cool down timer is equal to 5 seconds
+                    if (fireBallCoolDownTimer == 5)
                     {
-                        canFireFireBall = false;
+                        canFireBall = true;
+                        fireBallCoolDownTimer = 0;
+                        fireBall.SetActive(false);
                     }
                 }
             }
-
         }
         // if levitate is selected
         if (sorceressSpecialistSelection.levitateSelected)
@@ -200,8 +222,9 @@ public class SorceressAbilityEffects : MonoBehaviour
                 // if player inputs 6
                 if (Input.GetKeyDown("6"))
                 {
-
-                    canLevitate = false;
+                    GameObject player = GameObject.FindWithTag("Player");
+                    player.transform.position = returnPoint;
+                    player.transform.position = new Vector3 (player.transform.position.x, (player.transform.position.y + sorceressMovement.jumpHeight), player.transform.position.z);
                     levitateCoolDown += Time.deltaTime;
                     if (levitateCoolDown == levitateMaxTimer)
                     {
@@ -210,6 +233,7 @@ public class SorceressAbilityEffects : MonoBehaviour
                     if (levitateCoolDown < 5)
                     {
                         canLevitate = false;
+                        player.transform.position = returnPoint;
                     }
                 }
             }
@@ -217,21 +241,33 @@ public class SorceressAbilityEffects : MonoBehaviour
         // if water ball is selected
         if (sorceressSpecialistSelection.waterBallSelected)
         {
-            canFireWaterBall = true;
-            if (canFireWaterBall)
+            canWaterBall = true;
+            if (canWaterBall)
             {
-                // if player inputs 7
-                if (Input.GetKeyDown("7"))
+                // if player inputs 1
+                if (Input.GetKeyDown("1"))
                 {
-
-                    canFireWaterBall = false;
-                    // begin cool down timer
-                    waterBallCoolDown += Time.deltaTime;
-                    // if cool down timer is equal to 5 seconds
-                    if (waterBallCoolDown == 5)
+                    // spawn in wrecking ball
+                    GameObject WreckingBall = Instantiate(waterBall, attackPoint.position, cam.rotation);
+                    Rigidbody WreckingBallRb = WreckingBall.GetComponent<Rigidbody>();
+                    Vector3 forceDirection = cam.transform.forward;
+                    RaycastHit hit;
+                    // if wrecking ball hits an object
+                    if (Physics.Raycast(cam.position, cam.forward, out hit, 500f))
                     {
-                        canFireWaterBall = true;
-                        waterBallCoolDown = 0;
+                        forceDirection = (hit.point - attackPoint.position).normalized;
+                    }
+                    Vector3 force = forceDirection * waterBallThrowForce + transform.up * waterBallThrowUpwardForce;
+                    WreckingBallRb.AddForce(force, ForceMode.Impulse);
+                    canWaterBall = false;
+                    // begin cool down timer
+                    waterBallThrowCoolDownTimer += Time.deltaTime;
+                    // if cool down timer is equal to 5 seconds
+                    if (waterBallThrowCoolDownTimer == 5)
+                    {
+                        canWaterBall = true;
+                        waterBallThrowCoolDownTimer = 0;
+                        waterBall.SetActive(false);
                     }
                 }
             }
@@ -245,7 +281,14 @@ public class SorceressAbilityEffects : MonoBehaviour
                 // if player inputs 7
                 if (Input.GetKeyDown("7"))
                 {
-
+                    Collider[] colliders = Physics.OverlapSphere(transform.position, 6f);
+                    foreach (Collider c in colliders)
+                    {
+                        if (c.tag == "3DTarget")
+                        {
+                            enemyController.enemyHealth = enemyController.enemyHealth - lightningDamage;
+                        }
+                    }
                     canFireLighting = false;
                     // begin cool down timer
                     lightningCoolDown += Time.deltaTime;
@@ -295,8 +338,10 @@ public class SorceressAbilityEffects : MonoBehaviour
                 // if player inputs 7
                 if (Input.GetKeyDown("7"))
                 {
-
-                    canFly = false;
+                    if (Input.GetKeyDown(KeyCode.Space))
+                    {
+                        sorceressMovement.rb.AddForce(sorceressMovement.rb.transform.up * sorceressClass.Speed);
+                    }
                     // begin cool down timer
                     flyCoolDown += Time.deltaTime;
                     // if cool down timer is equal to 5 seconds
@@ -304,6 +349,10 @@ public class SorceressAbilityEffects : MonoBehaviour
                     {
                         canFly = true;
                         flyCoolDown = 0;
+                    }
+                    else if (flyCoolDown < maxFlyTimer)
+                    {
+                        canFly = true;
                     }
                 }
             }

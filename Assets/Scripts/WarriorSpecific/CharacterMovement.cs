@@ -79,14 +79,9 @@ public class CharacterMovement : MonoBehaviour
                 controller.Move(move * (warrior.Speed + sprintSpeed) * Time.deltaTime);
                 warriorStaminaBar.UseStamina(1);
                 warriorStaminaBar.canRegen = false;
+                // add 1 to the number of time the player has sprinted
+                timesSprinted = timesSprinted + 1;
             }
-        }
-
-        // if player has 0 stamina left
-        if (warriorStaminaBar.staminaBar.value == 0)
-        {
-            // add 1 to the number of time the player has sprinted
-            timesSprinted = timesSprinted + 1;
         }
 
         // if player presses the jump key (space) and player is on the ground

@@ -32,9 +32,21 @@ public class KarateAbilityEffects : MonoBehaviour
 
     // varibles for wall run
     public bool canWallRun;
+    public bool isWallRunning;
+    private bool wallLeft;
+    private bool wallRight;
     public float wallRunTimer;
     public float wallRunCoolDown;
     public float maxWallRunTime = 10f;
+    public float wallCheckDistance;
+    public float minJumpHeight;
+    private RaycastHit leftWallHit;
+    private RaycastHit rightWallHit;
+    public LayerMask whatIsWall;
+    public LayerMask whatIsGround;
+    private float horizontalInput;
+    private float verticleInput;
+    public Transform orientation;
 
     // variables for spin kick
     public bool canSpinKick;
@@ -60,6 +72,10 @@ public class KarateAbilityEffects : MonoBehaviour
     public bool canSlide;
     public float slideCoolDown;
     public float maxSlideTime = 10;
+    public float originalHeight;
+    public float reducedHeight;
+    public float slideSpeed;
+    public float sliding;
 
     public void Start()
     {
@@ -79,7 +95,14 @@ public class KarateAbilityEffects : MonoBehaviour
                 // if player input is 1
                 if (Input.GetKeyDown("1"))
                 {
-                    
+                    Collider[] colliders = Physics.OverlapSphere(transform.position, 2f);
+                    foreach (Collider c in colliders)
+                    {
+                        if (c.tag == "3DTarget")
+                        {
+                            enemyController.enemyHealth = enemyController.enemyHealth - woodBreakerDamage;
+                        }
+                    }
                     canWoodBreak = false;
                     woodBreakCoolDown += Time.deltaTime;
                     if (woodBreakCoolDown == 5)
@@ -174,16 +197,31 @@ public class KarateAbilityEffects : MonoBehaviour
                 // if player inputs 5
                 if (Input.GetKeyDown("5"))
                 {
-
-                    canWallRun = false;
+                    wallRight = Physics.Raycast(transform.position, orientation.right, out rightWallHit, wallCheckDistance, whatIsWall);
+                    wallLeft = Physics.Raycast(transform.position, -orientation.right, out leftWallHit, wallCheckDistance, whatIsWall);
+                    if ((wallLeft || wallRight) && karateMovement.z > 0 && AboveGround())
+                    {
+                        karateMovement.rb.useGravity = false;
+                        karateMovement.rb.velocity = new Vector3(karateMovement.rb.velocity.x, 0f, karateMovement.rb.velocity.z);
+                        Vector3 wallNormal = wallRight ? rightWallHit.normal : leftWallHit.normal;
+                        Vector3 wallForward = Vector3.Cross(wallNormal, transform.up);
+                        if ((orientation.forward - wallForward).magnitude > (orientation.forward - -wallForward).magnitude)
+                        {
+                            wallForward = -wallForward;
+                        }
+                        karateMovement.rb.AddForce(wallForward * karateClass.Speed, ForceMode.Force);
+                        isWallRunning = true;
+                    }
                     wallRunCoolDown += Time.deltaTime;
-                    if (wallRunCoolDown == 5)
+                    if (wallRunCoolDown == maxWallRunTime)
                     {
                         canWallRun = true;
                     }
                     if (wallRunCoolDown < 5)
                     {
+                        isWallRunning = false;
                         canWallRun = false;
+
                     }
                 }
             }
@@ -198,7 +236,14 @@ public class KarateAbilityEffects : MonoBehaviour
                 // if player inputs 6
                 if (Input.GetKeyDown("6"))
                 {
-
+                    Collider[] colliders = Physics.OverlapSphere(transform.position, 6f);
+                    foreach (Collider c in colliders)
+                    {
+                        if (c.tag == "3DTarget")
+                        {
+                            enemyController.enemyHealth = enemyController.enemyHealth - spinKickDamage;
+                        }
+                    }
                     canSpinKick = false;
                     spinKickCoolDown += Time.deltaTime;
                     if (spinKickCoolDown == 5)
@@ -221,7 +266,14 @@ public class KarateAbilityEffects : MonoBehaviour
                 // if player inputs 7
                 if (Input.GetKeyDown("7"))
                 {
-                   
+                    Collider[] colliders = Physics.OverlapSphere(transform.position, 2f);
+                    foreach (Collider c in colliders)
+                    {
+                        if (c.tag == "3DTarget")
+                        {
+                            enemyController.enemyHealth = enemyController.enemyHealth - chopDamage;
+                        }
+                    }
                     // begin cool down timer
                     karateChopCoolDown += Time.deltaTime;
                     // if cool down timer is equal to 5 seconds
@@ -242,7 +294,7 @@ public class KarateAbilityEffects : MonoBehaviour
                 // if player inputs 8
                 if (Input.GetKeyDown("8"))
                 {
-
+                    karateClass.Health = karateClass.Health * 10;
                     // begin cool down timer
                     zenCoolDown += Time.deltaTime;
                     // if cool down timer is equal to 5 seconds
@@ -263,7 +315,14 @@ public class KarateAbilityEffects : MonoBehaviour
                 // if player inputs 9
                 if (Input.GetKeyDown("9"))
                 {
-                    
+                    Collider[] colliders = Physics.OverlapSphere(transform.position, 5f);
+                    foreach (Collider c in colliders)
+                    {
+                        if (c.tag == "3DTarget")
+                        {
+                            enemyController.enemyHealth = enemyController.enemyHealth - punchDamage;
+                        }
+                    }
                     // begin cool down timer
                     firePunchCoolDown += Time.deltaTime;
                     // if cool down timer is equal to 5 seconds
@@ -284,8 +343,19 @@ public class KarateAbilityEffects : MonoBehaviour
                 // if player inputs 0
                 if (Input.GetKeyDown("0"))
                 {
-
-                    if (slideCoolDown == 5)
+                    slideCoolDown += Time.deltaTime;
+                    if (Input.GetKeyDown(KeyCode.LeftControl) && Input.GetKey(KeyCode.W))
+                    {
+                        karateMovement.capsuleCollider.height = reducedHeight;
+                        karateMovement.rb.AddForce(transform.forward * (slideSpeed + karateClass.Speed), ForceMode.VelocityChange);
+                        sliding += Time.deltaTime;
+                        if (sliding == 3)
+                        {
+                            sliding = 0;
+                            karateMovement.capsuleCollider.height = originalHeight;
+                        }
+                    }
+                    if (slideCoolDown == maxSlideTime)
                     {
                         canSlide = true;
                         slideCoolDown = 0;
@@ -297,5 +367,10 @@ public class KarateAbilityEffects : MonoBehaviour
                 }
             }
         }
+    }
+
+    private bool AboveGround()
+    {
+        return !Physics.Raycast(transform.position, Vector3.down, minJumpHeight, whatIsGround);
     }
 }

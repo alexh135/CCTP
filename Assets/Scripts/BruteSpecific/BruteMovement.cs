@@ -21,7 +21,7 @@ public class BruteMovement : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
-    Vector3 velocity;
+    public Vector3 velocity;
     bool isGrounded;
     public bool canKillEnemy;
     public bool enemyTakeDamage;
@@ -72,14 +72,8 @@ public class BruteMovement : MonoBehaviour
                 controller.Move(move * (bruteClass.Speed + sprintSpeed) * Time.deltaTime);
                 bruteStaminaBar.UseStamina(1);
                 bruteStaminaBar.canRegen = false;
+                timesSprinted = timesSprinted + 1;
             }
-        }
-
-        // if player has 0 stamina left
-        if (bruteStaminaBar.staminaBar.value == 0)
-        {
-            // add 1 to the number of time the player has sprinted
-            timesSprinted = timesSprinted + 1;
         }
 
         // if player presses the jump key (space) and player is on the ground

@@ -37,6 +37,7 @@ public class BruteAbilityEffects : MonoBehaviour
     public int poundDamage = 8;
     public float poundTimer;
     public bool canPound;
+    public int damageRange = 10;
 
     // variables for rock throw
     public GameObject rock;
@@ -194,7 +195,19 @@ public class BruteAbilityEffects : MonoBehaviour
                     // if player inputs 5
                     if (Input.GetKeyDown("5"))
                     {
-                        
+                        // player character jumps in air
+                        bruteMovement.velocity.y = Mathf.Sqrt((bruteMovement.jumpHeight * 2) * -2f * bruteMovement.gravity);
+                        bruteMovement.velocity.y += bruteMovement.gravity * Time.deltaTime;
+                        bruteMovement.controller.Move(bruteMovement.velocity * Time.deltaTime);
+                        // close range AOE attack causes damage to enemies within range
+                        Collider[] colliders = Physics.OverlapSphere(transform.position, 4f);
+                        foreach (Collider c in colliders)
+                        {
+                            if (c.tag == "3DTarget")
+                            {
+                                enemyController.enemyHealth = enemyController.enemyHealth - poundDamage;
+                            }
+                        }
                         canPound = false;
                         // begin cool down timer
                         poundTimer += Time.deltaTime;
@@ -280,7 +293,14 @@ public class BruteAbilityEffects : MonoBehaviour
                     // if player input is 7
                     if (Input.GetKeyDown("7"))
                     {
-                       
+                        Collider[] colliders = Physics.OverlapSphere(transform.position, 3f);
+                        foreach (Collider c in colliders)
+                        {
+                            if (c.tag == "3DTarget")
+                            {
+                                enemyController.enemyHealth = enemyController.enemyHealth - punchDamage;
+                            }
+                        }
                         canPunch = false;
                         punchTimer += Time.deltaTime;
                         if (punchTimer == 5)
@@ -303,7 +323,14 @@ public class BruteAbilityEffects : MonoBehaviour
                 // if player input is 9
                 if (Input.GetKeyDown("9"))
                 {
-
+                    Collider[] colliders = Physics.OverlapSphere(transform.position, 6f);
+                    foreach (Collider c in colliders)
+                    {
+                        if (c.tag == "3DTarget")
+                        {
+                            enemyController.enemyHealth = enemyController.enemyHealth - furyDamage;
+                        }
+                    }
                     canFury = false;
                     furyTimer += Time.deltaTime;
                     if (furyTimer == 5)
@@ -325,7 +352,14 @@ public class BruteAbilityEffects : MonoBehaviour
                 // if player input is 0
                 if (Input.GetKeyDown("0"))
                 {
-
+                    Collider[] colliders = Physics.OverlapSphere(transform.position, 5f);
+                    foreach (Collider c in colliders)
+                    {
+                        if (c.tag == "3DTarget")
+                        {
+                            enemyController.enemyHealth = enemyController.enemyHealth - rollDamage;
+                        }
+                    }
                     canRoll = false;
                     rollTimer += Time.deltaTime;
                     if (rollTimer == 5)

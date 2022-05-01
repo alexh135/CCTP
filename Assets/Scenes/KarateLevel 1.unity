@@ -156,7 +156,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -421,7 +421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 278048625567815446, guid: ff35995d3102e7f4092bc53a4b14f075, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.66
+      value: 6.2
       objectReference: {fileID: 0}
     - target: {fileID: 278048625567815446, guid: ff35995d3102e7f4092bc53a4b14f075, type: 3}
       propertyPath: m_LocalPosition.z
@@ -541,7 +541,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -748,7 +748,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -823,7 +823,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1207,7 +1207,7 @@ GameObject:
   - component: {fileID: 106682316}
   - component: {fileID: 106682315}
   m_Layer: 5
-  m_Name: Barge
+  m_Name: KarateChop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1277,9 +1277,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: WarriorSpecialistSkillUnlock, Assembly-CSharp
-        m_MethodName: UnlockAxeThrow
+      - m_Target: {fileID: 1340542253}
+        m_TargetAssemblyTypeName: KarateSpecialistSkillUnlock, Assembly-CSharp
+        m_MethodName: UnlockKarateChop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1451,7 +1451,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2138,8 +2138,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: StatUpgrades, Assembly-CSharp
+      - m_Target: {fileID: 1340542254}
+        m_TargetAssemblyTypeName: KarateStatUpgrades, Assembly-CSharp
         m_MethodName: UpgradeStamina
         m_Mode: 1
         m_Arguments:
@@ -3179,7 +3179,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3324,7 +3324,7 @@ GameObject:
   - component: {fileID: 307283279}
   - component: {fileID: 307283278}
   m_Layer: 5
-  m_Name: RockThrow
+  m_Name: SpinKick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3394,9 +3394,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: WarriorSpecialistSkillUnlock, Assembly-CSharp
-        m_MethodName: UnlockSlowDownTime
+      - m_Target: {fileID: 1340542253}
+        m_TargetAssemblyTypeName: KarateSpecialistSkillUnlock, Assembly-CSharp
+        m_MethodName: UnlockSpinKick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3598,7 +3598,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3752,7 +3752,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3990,7 +3990,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4609,7 +4609,7 @@ GameObject:
   - component: {fileID: 369705560}
   - component: {fileID: 369705559}
   m_Layer: 5
-  m_Name: WreckingBall
+  m_Name: WoodBreaker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4679,9 +4679,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: WarriorSpecialistSkillUnlock, Assembly-CSharp
-        m_MethodName: UnlockBarge
+      - m_Target: {fileID: 1340542253}
+        m_TargetAssemblyTypeName: KarateSpecialistSkillUnlock, Assembly-CSharp
+        m_MethodName: UnlockWoodBreak
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4811,7 +4811,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 374061990}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 392912819}
+        m_TargetAssemblyTypeName: KarateSpecialistSelection, Assembly-CSharp
+        m_MethodName: ZenUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &374061990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5176,7 +5188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!223 &392912818
 Canvas:
   m_ObjectHideFlags: 0
@@ -6052,7 +6064,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Wrecking Ball
+  m_Text: Wood Breaker
 --- !u!222 &440124372
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6079,7 +6091,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!223 &443195377
 Canvas:
   m_ObjectHideFlags: 0
@@ -6206,7 +6218,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6510,7 +6522,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6585,7 +6597,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6931,7 +6943,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7043,7 +7055,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Ground And Pound
+  m_Text: Wall Run
 --- !u!222 &526708624
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7289,8 +7301,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: StatUpgrades, Assembly-CSharp
+      - m_Target: {fileID: 1340542254}
+        m_TargetAssemblyTypeName: KarateStatUpgrades, Assembly-CSharp
         m_MethodName: UpgradeStrength
         m_Mode: 1
         m_Arguments:
@@ -7372,7 +7384,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7674,12 +7686,12 @@ GameObject:
   m_Component:
   - component: {fileID: 573776825}
   m_Layer: 0
-  m_Name: WarriorUI
+  m_Name: KarateUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &573776825
 Transform:
   m_ObjectHideFlags: 0
@@ -7903,6 +7915,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 578327990}
   m_CullTransparentMesh: 1
+--- !u!1001 &582531619
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 83.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 86.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423707, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: pointHandler
+      value: 
+      objectReference: {fileID: 193590703}
+    - target: {fileID: 4270534230992423708, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_Name
+      value: SkillPoint (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
 --- !u!1 &586927122
 GameObject:
   m_ObjectHideFlags: 0
@@ -8070,7 +8143,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 590635969}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 392912819}
+        m_TargetAssemblyTypeName: KarateSpecialistSelection, Assembly-CSharp
+        m_MethodName: SpeedUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &590635969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8501,7 +8586,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9063,7 +9148,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 696961939}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 392912819}
+        m_TargetAssemblyTypeName: KarateSpecialistSelection, Assembly-CSharp
+        m_MethodName: SlideUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &696961939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9181,6 +9278,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 697559022}
   m_CullTransparentMesh: 1
+--- !u!1001 &699080926
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 124.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 83
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423707, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: pointHandler
+      value: 
+      objectReference: {fileID: 193590703}
+    - target: {fileID: 4270534230992423708, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_Name
+      value: SkillPoint (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
 --- !u!1 &699925985
 GameObject:
   m_ObjectHideFlags: 0
@@ -9543,7 +9701,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9667,7 +9825,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 730810531}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 392912819}
+        m_TargetAssemblyTypeName: KarateSpecialistSelection, Assembly-CSharp
+        m_MethodName: DamageUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &730810531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9884,7 +10054,7 @@ GameObject:
   - component: {fileID: 745694677}
   - component: {fileID: 745694676}
   m_Layer: 5
-  m_Name: GroundAndPound
+  m_Name: Wall Run
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9954,9 +10124,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: WarriorSpecialistSkillUnlock, Assembly-CSharp
-        m_MethodName: UnlockGlitch
+      - m_Target: {fileID: 1340542253}
+        m_TargetAssemblyTypeName: KarateSpecialistSkillUnlock, Assembly-CSharp
+        m_MethodName: UnlockWallRun
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10130,7 +10300,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -10722,7 +10892,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Fury
+  m_Text: FirePunch
 --- !u!222 &835547101
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10810,6 +10980,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836482071}
   m_CullTransparentMesh: 1
+--- !u!1 &852965068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 852965069}
+  m_Layer: 0
+  m_Name: PlayerOrientation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &852965069
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852965068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 958815261}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &864487086
 GameObject:
   m_ObjectHideFlags: 0
@@ -10943,7 +11143,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -11218,7 +11418,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 897943208}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 392912819}
+        m_TargetAssemblyTypeName: KarateSpecialistSelection, Assembly-CSharp
+        m_MethodName: WoodBreakUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &897943208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11854,6 +12066,7 @@ GameObject:
   - component: {fileID: 958815263}
   - component: {fileID: 958815262}
   - component: {fileID: 958815260}
+  - component: {fileID: 958815266}
   m_Layer: 0
   m_Name: 'Player '
   m_TagString: Player
@@ -11884,6 +12097,8 @@ MonoBehaviour:
   sprintSpeed: 12
   gravity: -9.81
   jumpHeight: 3
+  x: 0
+  z: 0
   groundCheck: {fileID: 1040818267}
   groundDistance: 0.4
   groundMask:
@@ -11892,6 +12107,8 @@ MonoBehaviour:
   canKillEnemy: 0
   enemyTakeDamage: 0
   sprinting: 0
+  rb: {fileID: 958815266}
+  capsuleCollider: {fileID: 0}
   timesSprinted: 0
 --- !u!4 &958815261
 Transform:
@@ -11907,6 +12124,7 @@ Transform:
   - {fileID: 1040818267}
   - {fileID: 1231412018}
   - {fileID: 662902182}
+  - {fileID: 852965069}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11992,6 +12210,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 958815259}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &958815266
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958815259}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &970773669
 GameObject:
   m_ObjectHideFlags: 0
@@ -12266,7 +12500,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -13402,7 +13636,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -13900,7 +14134,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -14328,7 +14562,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -14679,7 +14913,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Roll
+  m_Text: Slide
 --- !u!222 &1229970433
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15394,7 +15628,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -15695,7 +15929,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -15770,7 +16004,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -15845,7 +16079,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -15970,8 +16204,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: WarriorSpecialistSkillUnlock, Assembly-CSharp
+      - m_Target: {fileID: 1340542253}
+        m_TargetAssemblyTypeName: KarateSpecialistSkillUnlock, Assembly-CSharp
         m_MethodName: UnlockSpeedBoost
         m_Mode: 1
         m_Arguments:
@@ -16071,15 +16305,51 @@ MonoBehaviour:
   enemyController: {fileID: 1543798287}
   karateMovement: {fileID: 958815260}
   karateSpecialistSelection: {fileID: 392912819}
+  canWoodBreak: 0
+  woodBreakCoolDown: 0
+  woodBreakerDamage: 8
   speedBoostTimer: 0
   speedBoosting: 0
+  sprintSpeedMultiplier: 0
   doubleDamageTimer: 0
   doubleDamage: 0
+  damageBoostMultiplier: 0
   doubleJumpTimer: 0
   doubleJumping: 0
-  sprintSpeedMultiplier: 0
-  damageBoostMultiplier: 0
   doubleJumpMultiplier: 0
+  canWallRun: 0
+  isWallRunning: 0
+  wallRunTimer: 0
+  wallRunCoolDown: 0
+  maxWallRunTime: 10
+  wallCheckDistance: 0
+  minJumpHeight: 0
+  whatIsWall:
+    serializedVersion: 2
+    m_Bits: 64
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 128
+  orientation: {fileID: 852965069}
+  canSpinKick: 0
+  spinKickCoolDown: 0
+  spinKickDamage: 8
+  canKarateChop: 0
+  karateChopCoolDown: 0
+  chopDamage: 8
+  canZen: 0
+  zenCoolDown: 0
+  maxZenTime: 5
+  canFirePunch: 0
+  firePunchCoolDown: 0
+  punchDamage: 8
+  canSlide: 0
+  slideCoolDown: 0
+  maxSlideTime: 10
+  originalHeight: 0
+  reducedHeight: 0
+  slideSpeed: 0
+  sliding: 0
 --- !u!114 &1340542253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17523,7 +17793,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1499914631}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 392912819}
+        m_TargetAssemblyTypeName: KarateSpecialistSelection, Assembly-CSharp
+        m_MethodName: JumpUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1499914631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17592,6 +17874,67 @@ Transform:
   m_Father: {fileID: 645123383}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1518191840
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_RootOrder
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 103.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 78.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423707, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: pointHandler
+      value: 
+      objectReference: {fileID: 193590703}
+    - target: {fileID: 4270534230992423708, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_Name
+      value: SkillPoint (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
 --- !u!1 &1519807054
 GameObject:
   m_ObjectHideFlags: 0
@@ -18382,7 +18725,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -18581,7 +18924,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1574752338}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 392912819}
+        m_TargetAssemblyTypeName: KarateSpecialistSelection, Assembly-CSharp
+        m_MethodName: SpinKickUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1574752338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18821,7 +19176,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -18945,7 +19300,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1608825109}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 392912819}
+        m_TargetAssemblyTypeName: KarateSpecialistSelection, Assembly-CSharp
+        m_MethodName: KarateChopUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1608825109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18997,7 +19364,7 @@ GameObject:
   - component: {fileID: 1612007089}
   - component: {fileID: 1612007088}
   m_Layer: 5
-  m_Name: Roll
+  m_Name: Slide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19067,9 +19434,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: WarriorSpecialistSkillUnlock, Assembly-CSharp
-        m_MethodName: UnlockHeal
+      - m_Target: {fileID: 1340542253}
+        m_TargetAssemblyTypeName: KarateSpecialistSkillUnlock, Assembly-CSharp
+        m_MethodName: UnlockSlide
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19193,6 +19560,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618559801}
   m_CullTransparentMesh: 1
+--- !u!1001 &1618837393
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 59.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423707, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: pointHandler
+      value: 
+      objectReference: {fileID: 193590703}
+    - target: {fileID: 4270534230992423708, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_Name
+      value: SkillPoint (8)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
 --- !u!1 &1622594662
 GameObject:
   m_ObjectHideFlags: 0
@@ -19529,7 +19957,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -19991,8 +20419,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: WarriorSpecialistSkillUnlock, Assembly-CSharp
+      - m_Target: {fileID: 1340542253}
+        m_TargetAssemblyTypeName: KarateSpecialistSkillUnlock, Assembly-CSharp
         m_MethodName: UnlockDoubleDamage
         m_Mode: 1
         m_Arguments:
@@ -20382,8 +20810,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: StatUpgrades, Assembly-CSharp
+      - m_Target: {fileID: 1340542254}
+        m_TargetAssemblyTypeName: KarateStatUpgrades, Assembly-CSharp
         m_MethodName: UpgradeSpeed
         m_Mode: 1
         m_Arguments:
@@ -20581,7 +21009,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Punch
+  m_Text: Zen
 --- !u!222 &1716951156
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20659,7 +21087,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -20909,7 +21337,7 @@ GameObject:
   - component: {fileID: 1759857957}
   - component: {fileID: 1759857956}
   m_Layer: 5
-  m_Name: Slow TIme
+  m_Name: Spin Kick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20967,7 +21395,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Rock Throw
+  m_Text: Spin Kick
 --- !u!222 &1759857957
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20976,6 +21404,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1759857954}
   m_CullTransparentMesh: 1
+--- !u!1001 &1764868355
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 87.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 68.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423707, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: pointHandler
+      value: 
+      objectReference: {fileID: 193590703}
+    - target: {fileID: 4270534230992423708, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_Name
+      value: SkillPoint (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
 --- !u!1 &1772326221
 GameObject:
   m_ObjectHideFlags: 0
@@ -21810,8 +22299,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: StatUpgrades, Assembly-CSharp
+      - m_Target: {fileID: 1340542254}
+        m_TargetAssemblyTypeName: KarateStatUpgrades, Assembly-CSharp
         m_MethodName: UpgradeHealth
         m_Mode: 1
         m_Arguments:
@@ -21873,7 +22362,7 @@ GameObject:
   - component: {fileID: 1822627476}
   - component: {fileID: 1822627475}
   m_Layer: 5
-  m_Name: Fury
+  m_Name: FirePunch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21943,9 +22432,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: WarriorSpecialistSkillUnlock, Assembly-CSharp
-        m_MethodName: UnlockSpearThrow
+      - m_Target: {fileID: 1340542253}
+        m_TargetAssemblyTypeName: KarateSpecialistSkillUnlock, Assembly-CSharp
+        m_MethodName: UnlockFirePunch
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22117,7 +22606,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -22159,6 +22648,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832715790}
   m_CullTransparentMesh: 1
+--- !u!1001 &1835133254
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 112.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 65.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423707, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: pointHandler
+      value: 
+      objectReference: {fileID: 193590703}
+    - target: {fileID: 4270534230992423708, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_Name
+      value: SkillPoint
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
 --- !u!1 &1841790340
 GameObject:
   m_ObjectHideFlags: 0
@@ -22304,7 +22854,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Barge
+  m_Text: Karate Chop
 --- !u!222 &1846559250
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22967,6 +23517,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1904313717}
   m_CullTransparentMesh: 1
+--- !u!1001 &1910723733
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 95.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 127.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423707, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: pointHandler
+      value: 
+      objectReference: {fileID: 193590703}
+    - target: {fileID: 4270534230992423708, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_Name
+      value: SkillPoint (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
 --- !u!1 &1916871321
 GameObject:
   m_ObjectHideFlags: 0
@@ -23409,8 +24020,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: StatUpgrades, Assembly-CSharp
+      - m_Target: {fileID: 1340542254}
+        m_TargetAssemblyTypeName: KarateStatUpgrades, Assembly-CSharp
         m_MethodName: UpgradeIntellect
         m_Mode: 1
         m_Arguments:
@@ -24074,6 +24685,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987343311}
   m_CullTransparentMesh: 1
+--- !u!1001 &1988987343
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_RootOrder
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 132.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 64.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423707, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: pointHandler
+      value: 
+      objectReference: {fileID: 193590703}
+    - target: {fileID: 4270534230992423708, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_Name
+      value: SkillPoint (9)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
 --- !u!1 &1989175521
 GameObject:
   m_ObjectHideFlags: 0
@@ -24092,7 +24764,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1989175522
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24270,7 +24942,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1992124173}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 392912819}
+        m_TargetAssemblyTypeName: KarateSpecialistSelection, Assembly-CSharp
+        m_MethodName: WallRunUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1992124173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24399,6 +25083,67 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1001 &1992800483
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 64.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 82.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423707, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: pointHandler
+      value: 
+      objectReference: {fileID: 193590703}
+    - target: {fileID: 4270534230992423708, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_Name
+      value: SkillPoint (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
 --- !u!1 &2000043095
 GameObject:
   m_ObjectHideFlags: 0
@@ -24432,7 +25177,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -24674,7 +25419,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -24716,6 +25461,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2010675641}
   m_CullTransparentMesh: 1
+--- !u!1001 &2025601814
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 61.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 129.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423703, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270534230992423707, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: pointHandler
+      value: 
+      objectReference: {fileID: 193590703}
+    - target: {fileID: 4270534230992423708, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
+      propertyPath: m_Name
+      value: SkillPoint (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c9e38fd418d4f7e468ecc62e318ee7f5, type: 3}
 --- !u!1 &2033381967
 GameObject:
   m_ObjectHideFlags: 0
@@ -24865,8 +25671,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: WarriorSpecialistSkillUnlock, Assembly-CSharp
+      - m_Target: {fileID: 1340542253}
+        m_TargetAssemblyTypeName: KarateSpecialistSkillUnlock, Assembly-CSharp
         m_MethodName: UnlockDoubleJump
         m_Mode: 1
         m_Arguments:
@@ -25604,7 +26410,7 @@ GameObject:
   - component: {fileID: 2083845997}
   - component: {fileID: 2083845996}
   m_Layer: 5
-  m_Name: Punch
+  m_Name: Zen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25674,9 +26480,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: WarriorSpecialistSkillUnlock, Assembly-CSharp
-        m_MethodName: UnlockShield
+      - m_Target: {fileID: 1340542253}
+        m_TargetAssemblyTypeName: KarateSpecialistSkillUnlock, Assembly-CSharp
+        m_MethodName: UnlockZen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25806,7 +26612,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2115479576}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 392912819}
+        m_TargetAssemblyTypeName: KarateSpecialistSelection, Assembly-CSharp
+        m_MethodName: FirePunchUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2115479576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25863,7 +26681,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2117265741
 RectTransform:
   m_ObjectHideFlags: 0

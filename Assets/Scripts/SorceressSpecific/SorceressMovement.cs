@@ -10,29 +10,41 @@ public class SorceressMovement : MonoBehaviour
     public SorceressAbilityEffects sorceressAbilityEffects;
     public LevelSelect levelSelect;
     public SorceressStaminaBar sorceressStaminaBar;
+    public SorceressEnemyController enemyController;
+    public SkillPointHandler pointHandler;
 
+    // public float required
     public float sprintSpeed = 12f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
-
-    public Transform groundCheck;
     public float groundDistance = 0.4f;
+    public float x;
+    public float z;
+
+    // transform that works out if the player is on the ground
+    public Transform groundCheck;
     public LayerMask groundMask;
 
+    // Vector 3 that stores the players velocity
     Vector3 velocity;
-    bool isGrounded;
+
+    // public bools required 
+    public bool isGrounded;
     public bool canKillEnemy;
     public bool enemyTakeDamage;
     public bool sprinting;
 
-    public SorceressEnemyController enemyController;
-    public SkillPointHandler pointHandler;
+    // public integer that tracks the amount of times the player has sprinted for passive stat upgrades
+    public int timesSprinted;
+
+    public Rigidbody rb;
 
     public void Start()
     {
         canKillEnemy = false;
         enemyTakeDamage = false;
         sprinting = false;
+        timesSprinted = 0;
     }
 
     // Update is called once per frame
@@ -51,8 +63,8 @@ public class SorceressMovement : MonoBehaviour
             velocity.y = -2f;
         }
 
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        x = Input.GetAxis("Horizontal");
+        z = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * z;
 
@@ -65,6 +77,8 @@ public class SorceressMovement : MonoBehaviour
                 controller.Move(move * (sorceressClass.Speed + sprintSpeed) * Time.deltaTime);
                 sorceressStaminaBar.UseStamina(1);
                 sorceressStaminaBar.canRegen = false;
+                // add 1 to the number of time the player has sprinted
+                timesSprinted = timesSprinted + 1;
             }
          }
        

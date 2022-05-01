@@ -16,6 +16,8 @@ public class KarateMovement : MonoBehaviour
     public float sprintSpeed = 12f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
+    public float x;
+    public float z;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -26,6 +28,9 @@ public class KarateMovement : MonoBehaviour
     public bool canKillEnemy;
     public bool enemyTakeDamage;
     public bool sprinting;
+
+    public Rigidbody rb;
+    public CapsuleCollider capsuleCollider;
 
     // public integer that tracks the amount of times the player has sprinted for passive stat upgrades
     public int timesSprinted;
@@ -54,8 +59,8 @@ public class KarateMovement : MonoBehaviour
             velocity.y = -2f;
         }
 
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        x = Input.GetAxis("Horizontal");
+        z = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * z;
 
@@ -68,14 +73,9 @@ public class KarateMovement : MonoBehaviour
                 controller.Move(move * (karateClass.Speed + sprintSpeed) * Time.deltaTime);
                 karateStaminaBar.UseStamina(1);
                 karateStaminaBar.canRegen = false;
+                // add 1 to the number of time the player has sprinted
+                timesSprinted = timesSprinted + 1;
             }
-        }
-
-        // if player has 0 stamina left
-        if (karateStaminaBar.staminaBar.value == 0)
-        {
-            // add 1 to the number of time the player has sprinted
-            timesSprinted = timesSprinted + 1;
         }
 
         // if player presses the jump key (space) and player is on the ground

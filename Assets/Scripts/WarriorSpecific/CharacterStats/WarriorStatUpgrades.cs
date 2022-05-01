@@ -8,7 +8,7 @@ public class WarriorStatUpgrades : MonoBehaviour
     public SkillPointHandler pointHandler;
     public WarriorClass warrior;
 
-    // reference to 
+    // reference to max stat limits
     public int maxHealth = 20;
     public int maxStrength = 30;
     public int maxSpeed = 30;
